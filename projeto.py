@@ -7,13 +7,14 @@ clube = 0
 juncao = 0
 mud_valor = 0
 intem = 0
+cpf = 0
 def func():
-    Cpf = 0
-    valor_cpf = 0
-    Cpf = input("Deseja CPF na nota:")
-    if Cpf == "sim":
-        valor_cpf = input("Digite o CPF: ")
-        return valor_cpf
+    global cpf
+    dej_cpf = 0
+    dej_cpf = str(input("Cpf na Nota?: ")).lower()
+    if dej_cpf == "sim":
+        cpf = input("Insira o CPF: ")
+        return
 func()
 while True:
     produto = str(input("Digite o nome do produto: "))
@@ -32,13 +33,11 @@ if clube == "sim":
     print(f"O valor da compra foi de: R${soma} (Com Clube 20% OFF)")
     print("-------------------------------------------------------")
 else:
-    print(f"O valor da compra foi de: R${soma} (Sem Clube)"'\n')
-    print("---------------------------------------------------")
-print("\n")
+    print(f"O valor da compra foi de: R${soma} (Sem Clube)")
+    print("-----------------------------------------------")
 print("Nota Fiscal")
-print("_____________________")
+print("-----------")
 for intem in lista:
     print(f"{intem}")
 print(f"Total a pagar: R${soma}")
-print(f"Cpf: {cpf}")
-
+print(f"CPF: {cpf}")
