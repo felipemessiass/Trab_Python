@@ -7,6 +7,14 @@ clube = 0
 juncao = 0
 mud_valor = 0
 intem = 0
+def func():
+    Cpf = 0
+    valor_cpf = 0
+    Cpf = input("Deseja CPF na nota:")
+    if Cpf == "sim":
+        valor_cpf = input("Digite o CPF: ")
+        return valor_cpf
+func()
 while True:
     produto = str(input("Digite o nome do produto: "))
     if produto == "sair":
@@ -32,3 +40,5 @@ print("_____________________")
 for intem in lista:
     print(f"{intem}")
 print(f"Total a pagar: R${soma}")
+print(f"Cpf: {cpf}")
+
